@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-100 text-slate-900;
+}
+
+.report-page {
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto 1rem;
+  background: white;
+  box-shadow: 0 0 0 1px #d6d8dd, 0 8px 30px rgba(15, 23, 42, 0.1);
+}
+
+@media print {
+  body { background: white; }
+  .no-print { display: none !important; }
+  .report-page { box-shadow: none; margin: 0; page-break-after: always; }
+}
